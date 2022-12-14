@@ -1,7 +1,9 @@
 package dao;
 
 import javax.persistence.Column;
+
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
@@ -9,7 +11,8 @@ import javax.persistence.Table;
 public class alumnos {
 	
 	//Atributos
-	@Column(name="nombre")
+	@Id
+	@Column(name="nombre" ,unique=true, nullable=false)
 	private String nombre;
 	@Column(name="apellidos")
 	private String apellidos;

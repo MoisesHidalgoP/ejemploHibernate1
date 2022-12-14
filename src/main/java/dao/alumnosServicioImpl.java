@@ -2,6 +2,7 @@ package dao;
 
 import java.util.List;
 
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
@@ -9,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class alumnosServicioImpl implements alumnosServicio {
-	
+
 	@PersistenceContext
 	private EntityManager em;
 
@@ -21,7 +22,7 @@ public class alumnosServicioImpl implements alumnosServicio {
 
 
 	public List<alumnos> buscarTodos() {
-		return em.createQuery("SELECT alumnos FROM alumnos alumnos").getResultList();
+		return em.createQuery("SELECT alumno FROM alumnos alumno").getResultList();
 	}
 
 }

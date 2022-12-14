@@ -28,7 +28,7 @@
 	<!-- Configuración del JPA -->
 	<bean id="entityManagerFactory" 
 			class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
-			p:packagesToScan="dao.alumnos"
+			p:packagesToScan="dao"
             p:dataSource-ref="dataSource"
 			>
 		<property name="jpaVendorAdapter">
@@ -38,6 +38,7 @@
 				<property name="databasePlatform" value="org.hibernate.dialect.PostgreSQLDialect" />
 			</bean>
 		</property>
+		
 	</bean>
 	
 	<!-- Gestor de transacciones -->
